@@ -115,16 +115,11 @@ Add a new template with `python sources.py add OWNER/REPO PATH`, then add its ro
 
 ## Your own skills
 
-Skills written for this repository, not adapted from a template.
+Skills written for this repository, not adapted from a template. Unfinished skills in `work-in-progress/` are listed here once they move to `skills/`.
 
 | Skill | Origin |
 |---|---|
 | [`skills/1password-cli`](skills/1password-cli/SKILL.md) | Original, moved from tools-and-scripts |
-| [`skills/human-voice`](skills/human-voice/SKILL.md) | Original, the human-voice suite |
-| [`skills/voice-audit`](skills/voice-audit/SKILL.md) | Original, the human-voice suite |
-| [`skills/voice-profile`](skills/voice-profile/SKILL.md) | Original, the human-voice suite |
-| [`skills/voice-validate`](skills/voice-validate/SKILL.md) | Original, the human-voice suite |
-| [`skills/voice-write`](skills/voice-write/SKILL.md) | Original, the human-voice suite |
 
 ## License files and extras
 

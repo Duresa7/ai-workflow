@@ -7,13 +7,15 @@
 Rules:
 - Every file under sources/ matches the blob hash recorded in
   sources/sources.lock.json, and every recorded file exists.
-- Every skill folder in skills/ and profiles/*/skills/ has a SKILL.md whose
-  `name:` matches the folder.
+- Every skill folder in skills/, profiles/*/skills/, and
+  work-in-progress/*/skills/ has a SKILL.md whose `name:` matches the folder.
 - SOURCES.md has one row per skill template, with the commit from the lock
-  file, and every own or customized skill is traced in it.
+  file, and every skill in skills/ and profiles/ is traced in it. Work in
+  progress doesn't need to be traced until it moves to skills/.
 - Every profiles/*/profile.toml has a description, and its includes point at
   skill folders that exist.
-- Skill test scripts (skills/**/scripts/test_*.py) pass.
+- Skill test scripts (scripts/test_*.py inside skills/, profiles/, and
+  work-in-progress/) pass.
 """
 
 from __future__ import annotations
@@ -226,7 +228,12 @@ def check_upstream(lock: dict) -> list[str]:
 
 def run_skill_tests(root: Path) -> list[str]:
     problems: list[str] = []
-    for test in sorted((root / "skills").glob("**/scripts/test_*.py")):
+    tests = [
+        test
+        for folder in ("skills", "profiles", "work-in-progress")
+        for test in (root / folder).glob("**/scripts/test_*.py")
+    ]
+    for test in sorted(tests):
         completed = subprocess.run(
             [sys.executable, "-I", str(test)], capture_output=True, text=True
         )
@@ -242,6 +249,9 @@ def run(root: Path, upstream: bool) -> list[str]:
     problems = check_sources(root, lock)
     for folder in skill_folders(root / "skills"):
         problems += check_skill_folder(folder, root)
+    for project in skill_folders(root / "work-in-progress"):
+        for folder in skill_folders(project / "skills"):
+            problems += check_skill_folder(folder, root)
     problems += check_sources_md(root, lock)
     problems += check_profiles(root)
     problems += run_skill_tests(root)

@@ -2,10 +2,11 @@
 
 This repository holds skills for AI coding agents. There is no CLAUDE.md. This file is the only agent instruction file.
 
-## The three skill folders
+## The skill folders
 
 - `sources/<owner>/<skill>/` holds untouched upstream templates. **Never edit, rename, or delete anything under `sources/`.** `check.py` compares every file with the hash in `sources/sources.lock.json` and fails on any change. Only `python sources.py add` writes there.
 - `skills/<name>/` holds the owner's own skills and customized versions meant for every project.
+- `work-in-progress/<project>/` holds unfinished skills (`skills/<name>/`) with their `notes/` and `research/`. Put new skills, working notes, and research material here until the skill is finished; see `work-in-progress/README.md`.
 - `profiles/<profile>/skills/<name>/` holds versions tweaked for one kind of work. `profiles/<profile>/profile.toml` lists the skills the profile uses unchanged.
 
 ## Customizing a template
@@ -16,7 +17,7 @@ This repository holds skills for AI coding agents. There is no CLAUDE.md. This f
 4. In `SOURCES.md`, add the copy's path to that template's **Customized as** cell, in backticks, comma-separated if there are several.
 5. Run `python check.py`.
 
-A brand-new skill that isn't based on a template goes in the **Your own skills** table in `SOURCES.md` instead.
+A brand-new skill starts in `work-in-progress/<project>/skills/<name>/`. When it's finished, it moves to `skills/<name>/` and goes in the **Your own skills** table in `SOURCES.md`.
 
 ## Adding a template
 

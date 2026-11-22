@@ -135,6 +135,20 @@ class CheckTests(unittest.TestCase):
         self.repo.write("profiles/gamedev/profile.toml", "include = []\n")
         self.assertProblem("needs a description")
 
+    def test_work_in_progress_needs_no_trace(self) -> None:
+        self.repo.write("work-in-progress/idea/skills/idea/SKILL.md", SKILL.format(name="idea"))
+        self.repo.write("work-in-progress/idea/notes/todo.md", "- finish it\n")
+        self.assertEqual(self.repo.problems(), [])
+
+    def test_work_in_progress_name_must_match_folder(self) -> None:
+        self.repo.write("work-in-progress/idea/skills/idea/SKILL.md", SKILL.format(name="other"))
+        self.assertProblem("expected 'idea'")
+
+    def test_work_in_progress_tests_run(self) -> None:
+        self.repo.write("work-in-progress/idea/skills/idea/SKILL.md", SKILL.format(name="idea"))
+        self.repo.write("work-in-progress/idea/skills/idea/scripts/test_idea.py", "raise SystemExit(1)\n")
+        self.assertProblem("test_idea.py failed")
+
     def test_failing_skill_test_fails(self) -> None:
         self.repo.write("skills/mine/scripts/test_mine.py", "raise SystemExit(1)\n")
         self.assertProblem("test_mine.py failed")

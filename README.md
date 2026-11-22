@@ -7,30 +7,29 @@ My skills and guidance for AI coding agents (Claude Code and Codex), plus untouc
 ## Layout
 
 ```
-skills/      My own skills, and my customized versions of templates. Used in any project.
-profiles/    Skill sets tweaked for one kind of work, such as profiles/gamedev/.
-sources/     Untouched upstream skills, the templates I customize from. Never edited.
-guidance/    Notes an agent can read, such as how to select a model and divide work.
-archive/     Retired skills (e2b-sandbox, orchestrate), kept for reference.
-SOURCES.md   Where every skill comes from: upstream link, license, pinned commit, customized versions.
+skills/            My own skills, and my customized versions of templates. Used in any project.
+work-in-progress/  Unfinished skills, with their notes and research.
+profiles/          Skill sets tweaked for one kind of work, such as profiles/gamedev/.
+sources/           Untouched upstream skills, the templates I customize from. Never edited.
+guidance/          Notes an agent can read, such as how to select a model and divide work.
+archive/           Retired skills (e2b-sandbox, orchestrate), kept for reference.
+SOURCES.md         Where every skill comes from: upstream link, license, pinned commit, customized versions.
 ```
 
 ## How the pieces fit
 
 1. **Templates.** `sources/<owner>/<skill>/` is a byte-for-byte copy of an upstream skill at one commit. `sources/sources.lock.json` records the hash of every file, and `check.py` fails if one changes.
 2. **Customizing.** To change a template, copy its folder into `skills/<name>/` (for every project) or `profiles/<profile>/skills/<name>/` (for one kind of work), edit the copy, and list the copy in the template's **Customized as** cell in [SOURCES.md](SOURCES.md).
-3. **Profiles.** A profile is a `profile.toml` (description and an `include` list of skills to use unchanged) plus a `skills/` folder with that profile's tweaked copies. When a profile has its own copy of a skill, that copy replaces the version in `skills/` or `sources/` with the same name. See [profiles/README.md](profiles/README.md).
+3. **Work in progress.** A skill being built lives in `work-in-progress/<project>/skills/<name>/`, next to the project's `notes/` and `research/`. It moves to `skills/` when it's finished. See [work-in-progress/README.md](work-in-progress/README.md).
+4. **Profiles.** A profile is a `profile.toml` (description and an `include` list of skills to use unchanged) plus a `skills/` folder with that profile's tweaked copies. When a profile has its own copy of a skill, that copy replaces the version in `skills/` or `sources/` with the same name. See [profiles/README.md](profiles/README.md).
 
 ## My skills
 
 | Skill | What it does |
 |---|---|
 | [`1password-cli`](skills/1password-cli/SKILL.md) | Uses the 1Password CLI (`op`) and keeps secret values out of the agent output. |
-| [`human-voice`](skills/human-voice/SKILL.md) | Runs the full loop for prose that reads as its author, not as AI: profile, write, audit, revise, validate. Holds the suite's shared `references/` and `scripts/`. |
-| [`voice-profile`](skills/voice-profile/SKILL.md) | Builds an author's voice profile from samples of their own writing. |
-| [`voice-write`](skills/voice-write/SKILL.md) | Drafts or rewrites a piece in the author's voice from a brief and notes. |
-| [`voice-audit`](skills/voice-audit/SKILL.md) | Reports the signals that make readers and AI detectors call prose AI-written, without rewriting. |
-| [`voice-validate`](skills/voice-validate/SKILL.md) | Gives a cold-read PASS or FAIL on a finished draft. |
+
+In progress: the [`human-voice`](work-in-progress/human-voice/README.md) suite, five skills for prose that reads as its author, not as AI.
 
 ## Templates
 
