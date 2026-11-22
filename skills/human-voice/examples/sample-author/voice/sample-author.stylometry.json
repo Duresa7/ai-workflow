@@ -1,0 +1,822 @@
+{
+  "name": "sample-author",
+  "samples": [
+    "samples/issue-37-backups.md",
+    "samples/issue-41-thinkpad.md",
+    "samples/issue-44-travel.md"
+  ],
+  "sample_words_total": 854,
+  "metrics": {
+    "sentence_len_mean": {
+      "mean": 13.724789915966387,
+      "sd": 0.9869672474917299,
+      "min": 12.470588235294118,
+      "max": 14.882352941176471
+    },
+    "sentence_len_cv": {
+      "mean": 0.6479366096699011,
+      "sd": 0.07127161539095178,
+      "min": 0.5477696187723841,
+      "max": 0.7077358239060775
+    },
+    "burstiness": {
+      "mean": -0.21598126963116973,
+      "sd": 0.05416230233842814,
+      "min": -0.2921819731713711,
+      "max": -0.1711413276003259
+    },
+    "paragraph_len_mean": {
+      "mean": 44.31388888888889,
+      "sd": 2.8732187181746434,
+      "min": 42.166666666666664,
+      "max": 48.375
+    },
+    "paragraph_len_cv": {
+      "mean": 0.590452904744682,
+      "sd": 0.08107963050218958,
+      "min": 0.484570192443396,
+      "max": 0.6815059146294482
+    },
+    "mattr_100": {
+      "mean": 0.7430888870589958,
+      "sd": 0.013293905484493057,
+      "min": 0.7248695652173913,
+      "max": 0.7562152777777778
+    },
+    "contraction_per_1k": {
+      "mean": 48.307110618706396,
+      "sd": 12.572513879193792,
+      "min": 35.573122529644266,
+      "max": 65.42056074766356
+    },
+    "first_person_per_1k": {
+      "mean": 73.69108909416782,
+      "sd": 7.443339005059572,
+      "min": 67.19367588932806,
+      "max": 84.11214953271028
+    },
+    "second_person_per_1k": {
+      "mean": 10.678160225045119,
+      "sd": 4.499705482340561,
+      "min": 4.672897196261682,
+      "max": 15.503875968992247
+    },
+    "em_dash_per_1k": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "semicolon_per_1k": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "question_per_1k": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "exclamation_per_1k": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "paren_per_1k": {
+      "mean": 5.054004954782668,
+      "sd": 2.1890052002070948,
+      "min": 2.5839793281653747,
+      "max": 7.905138339920948
+    },
+    "flesch_reading_ease": {
+      "mean": 77.08737196229764,
+      "sd": 1.82853937215451,
+      "min": 74.69383864217626,
+      "max": 79.13183139534885
+    },
+    "avg_syllables_per_word": {
+      "mean": 1.3685243776764524,
+      "sd": 0.017688454367756897,
+      "min": 1.3436692506459949,
+      "max": 1.383399209486166
+    },
+    "nominalization_per_1k": {
+      "mean": 3.736481898129177,
+      "sd": 0.8663774184109468,
+      "min": 2.5839793281653747,
+      "max": 4.672897196261682
+    },
+    "participial_clause_per_1k": {
+      "mean": 0.8613264427217916,
+      "sd": 1.2180995369277305,
+      "min": 0.0,
+      "max": 2.5839793281653747
+    },
+    "transition_opener_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "short_sentence_share": {
+      "mean": 0.32703081232493,
+      "sd": 0.10674161885390687,
+      "min": 0.17647058823529413,
+      "max": 0.4117647058823529
+    },
+    "long_sentence_share": {
+      "mean": 0.031512605042016806,
+      "sd": 0.02419769263749439,
+      "min": 0.0,
+      "max": 0.058823529411764705
+    },
+    "ai_lexicon_per_1k": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  },
+  "vocabulary": {
+    "all_words": [
+      "a",
+      "about",
+      "actually",
+      "advertise",
+      "afternoon",
+      "against",
+      "airport",
+      "all",
+      "always",
+      "an",
+      "and",
+      "another",
+      "any",
+      "app",
+      "apps",
+      "as",
+      "asked",
+      "asking",
+      "aspirational",
+      "assumed",
+      "at",
+      "back",
+      "backup",
+      "backups",
+      "bad",
+      "be",
+      "because",
+      "been",
+      "behind",
+      "best",
+      "big",
+      "bios",
+      "board",
+      "boot",
+      "boring",
+      "but",
+      "buying",
+      "by",
+      "cables",
+      "can",
+      "category",
+      "cause",
+      "causes",
+      "changed",
+      "changelog",
+      "checked",
+      "choke",
+      "choked",
+      "claims",
+      "clean",
+      "cleaned",
+      "closet",
+      "collecting",
+      "comes",
+      "confidence",
+      "correction",
+      "cost",
+      "costs",
+      "count",
+      "data",
+      "day",
+      "dead",
+      "deep",
+      "default",
+      "did",
+      "didn't",
+      "died",
+      "different",
+      "disaster",
+      "disk",
+      "display",
+      "district's",
+      "do",
+      "does",
+      "doing",
+      "dollars",
+      "don't",
+      "done",
+      "double-registering",
+      "drawer",
+      "drive",
+      "e-waste",
+      "eat",
+      "eighteen",
+      "either",
+      "eleven",
+      "emailed",
+      "embarrassingly",
+      "error",
+      "even",
+      "eventually",
+      "ever",
+      "every",
+      "everyone",
+      "exactly",
+      "expected",
+      "failing",
+      "fair",
+      "false",
+      "feature",
+      "feels",
+      "finally",
+      "find",
+      "finding",
+      "fine",
+      "first",
+      "five",
+      "fixed",
+      "for",
+      "forty",
+      "found",
+      "four",
+      "free",
+      "from",
+      "gb",
+      "genuinely",
+      "get",
+      "getting",
+      "going",
+      "gone",
+      "good",
+      "got",
+      "guarding",
+      "had",
+      "hallway",
+      "happened",
+      "hardware",
+      "hasn't",
+      "hate",
+      "have",
+      "here",
+      "here's",
+      "hi",
+      "hit",
+      "home",
+      "honestly",
+      "hotel",
+      "hours",
+      "hub",
+      "hypothesis",
+      "i",
+      "i'd",
+      "i'll",
+      "i'm",
+      "i've",
+      "if",
+      "image",
+      "in",
+      "index",
+      "instead",
+      "is",
+      "isn't",
+      "issue",
+      "it",
+      "it's",
+      "just",
+      "keep",
+      "kept",
+      "keyboard",
+      "knees",
+      "know",
+      "knowing",
+      "labeled",
+      "last",
+      "left",
+      "legacy",
+      "length",
+      "less",
+      "lesson",
+      "let's",
+      "levels",
+      "lie",
+      "life",
+      "lightweight",
+      "like",
+      "list",
+      "little",
+      "lives",
+      "losses",
+      "lost",
+      "macbook",
+      "machine",
+      "mad",
+      "march",
+      "marcus",
+      "maybe",
+      "mb",
+      "me",
+      "membrane",
+      "menu",
+      "might",
+      "minimal",
+      "month's",
+      "months",
+      "more",
+      "most",
+      "moved",
+      "muttering",
+      "my",
+      "needed",
+      "needs",
+      "never",
+      "new",
+      "newsletter",
+      "next",
+      "night",
+      "nine",
+      "no",
+      "nobody",
+      "none",
+      "normal",
+      "not",
+      "note-taking",
+      "notes",
+      "notice",
+      "now",
+      "obviously",
+      "of",
+      "off",
+      "off-by-one",
+      "old",
+      "on",
+      "once",
+      "one",
+      "ones",
+      "onto",
+      "opposite",
+      "or",
+      "out",
+      "over",
+      "own",
+      "paid",
+      "particular",
+      "past",
+      "pdf",
+      "people",
+      "phone",
+      "pick",
+      "pile",
+      "plan",
+      "planned",
+      "post",
+      "pretend",
+      "preview",
+      "priya",
+      "problem",
+      "quarter",
+      "question",
+      "quick",
+      "quietly",
+      "ram",
+      "rate",
+      "reader",
+      "ready",
+      "rebuild",
+      "recommending",
+      "reddit",
+      "reflex",
+      "reframe",
+      "registering",
+      "removed",
+      "repeat",
+      "reply",
+      "restore",
+      "restored",
+      "room",
+      "rule",
+      "running",
+      "runs",
+      "said",
+      "say",
+      "saying",
+      "says",
+      "school",
+      "script",
+      "search",
+      "second",
+      "seconds",
+      "send",
+      "settings",
+      "she",
+      "shift",
+      "short",
+      "should",
+      "silently",
+      "slow",
+      "small",
+      "snapshots",
+      "so",
+      "something",
+      "somewhere",
+      "spare",
+      "specific",
+      "spent",
+      "spinning",
+      "spring",
+      "started",
+      "startup",
+      "stick",
+      "stopped",
+      "story",
+      "stuck",
+      "stuff",
+      "surprised",
+      "swapping",
+      "swear",
+      "sync",
+      "takes",
+      "talk",
+      "tell",
+      "telling",
+      "test",
+      "than",
+      "thank",
+      "that",
+      "that's",
+      "the",
+      "them",
+      "themselves",
+      "then",
+      "thing",
+      "things",
+      "think",
+      "thinkpad",
+      "third",
+      "this",
+      "thread",
+      "three",
+      "through",
+      "tier",
+      "time",
+      "times",
+      "to",
+      "to-do",
+      "toggle",
+      "took",
+      "tool",
+      "travelling",
+      "tried",
+      "true",
+      "trusting",
+      "try",
+      "trying",
+      "tuesday",
+      "turned",
+      "twice",
+      "two",
+      "type",
+      "under",
+      "until",
+      "up",
+      "usb",
+      "usb-a",
+      "version",
+      "waiting",
+      "walked",
+      "want",
+      "warms",
+      "was",
+      "wasn't",
+      "way",
+      "week",
+      "well",
+      "went",
+      "were",
+      "what",
+      "when",
+      "where",
+      "whether",
+      "which",
+      "whole",
+      "why",
+      "wife",
+      "wifi",
+      "working",
+      "works",
+      "worse",
+      "would",
+      "write",
+      "written",
+      "wrong",
+      "wrote",
+      "years",
+      "yes",
+      "you",
+      "you'd",
+      "you've",
+      "your",
+      "yourself"
+    ],
+    "favorites": [
+      [
+        "wrong",
+        6
+      ],
+      [
+        "thing",
+        5
+      ],
+      [
+        "three",
+        5
+      ],
+      [
+        "old",
+        5
+      ],
+      [
+        "i've",
+        5
+      ],
+      [
+        "keep",
+        4
+      ],
+      [
+        "once",
+        4
+      ],
+      [
+        "backup",
+        4
+      ],
+      [
+        "last",
+        4
+      ],
+      [
+        "i'd",
+        4
+      ],
+      [
+        "actually",
+        4
+      ],
+      [
+        "problem",
+        4
+      ],
+      [
+        "week",
+        4
+      ],
+      [
+        "months",
+        3
+      ],
+      [
+        "instead",
+        3
+      ],
+      [
+        "that's",
+        3
+      ],
+      [
+        "machine",
+        3
+      ],
+      [
+        "disk",
+        3
+      ],
+      [
+        "you've",
+        3
+      ],
+      [
+        "next",
+        3
+      ],
+      [
+        "issue",
+        3
+      ],
+      [
+        "tuesday",
+        3
+      ],
+      [
+        "second",
+        3
+      ],
+      [
+        "checked",
+        3
+      ],
+      [
+        "back",
+        3
+      ],
+      [
+        "sync",
+        3
+      ],
+      [
+        "don't",
+        3
+      ],
+      [
+        "want",
+        3
+      ],
+      [
+        "backups",
+        2
+      ],
+      [
+        "rule",
+        2
+      ],
+      [
+        "finally",
+        2
+      ],
+      [
+        "times",
+        2
+      ],
+      [
+        "eleven",
+        2
+      ],
+      [
+        "found",
+        2
+      ],
+      [
+        "ones",
+        2
+      ],
+      [
+        "different",
+        2
+      ],
+      [
+        "now",
+        2
+      ],
+      [
+        "test",
+        2
+      ],
+      [
+        "gone",
+        2
+      ],
+      [
+        "spare",
+        2
+      ],
+      [
+        "afternoon",
+        2
+      ],
+      [
+        "two",
+        2
+      ],
+      [
+        "expected",
+        2
+      ],
+      [
+        "exactly",
+        2
+      ],
+      [
+        "reply",
+        2
+      ],
+      [
+        "think",
+        2
+      ],
+      [
+        "thinkpad",
+        2
+      ],
+      [
+        "boot",
+        2
+      ],
+      [
+        "off",
+        2
+      ],
+      [
+        "usb",
+        2
+      ],
+      [
+        "stick",
+        2
+      ],
+      [
+        "closet",
+        2
+      ],
+      [
+        "walked",
+        2
+      ],
+      [
+        "said",
+        2
+      ],
+      [
+        "small",
+        2
+      ],
+      [
+        "reader",
+        2
+      ],
+      [
+        "note-taking",
+        2
+      ],
+      [
+        "people",
+        2
+      ],
+      [
+        "lightweight",
+        2
+      ],
+      [
+        "years",
+        2
+      ]
+    ],
+    "ai_lexicon_used": [],
+    "common_openers": [
+      [
+        "i",
+        8
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "it",
+        3
+      ],
+      [
+        "once",
+        2
+      ],
+      [
+        "it's",
+        2
+      ],
+      [
+        "i've",
+        2
+      ],
+      [
+        "a",
+        1
+      ],
+      [
+        "and",
+        1
+      ],
+      [
+        "instead",
+        1
+      ],
+      [
+        "quick",
+        1
+      ]
+    ]
+  },
+  "note": "Generated by stylometry.py profile. Pair with the qualitative voice profile written by the voice-profile skill."
+}
