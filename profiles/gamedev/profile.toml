@@ -1,0 +1,4 @@
+description = "Game development."
+
+# Skills this profile uses unchanged. Paths point at skills/ or sources/.
+include = []
