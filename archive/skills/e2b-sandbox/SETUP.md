@@ -86,7 +86,7 @@ Then restart Claude Code, Codex and any terminal, so they start with the new var
 
 ## 3. Link the skill
 
-Clone this repository once, then link the skill folder into each agent's skills folder, the same way as the other skills in [`ai-configs`](../../README.md). Run these from the `ai-configs` folder of the clone.
+Clone this repository once, then link the skill folder into each agent's skills folder, the same way as the other skills in [this repository](../../../README.md). Run these from the root of the clone.
 
 macOS and Linux:
 
