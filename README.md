@@ -11,7 +11,7 @@ skills/      My own skills, and my customized versions of templates. Used in any
 profiles/    Skill sets tweaked for one kind of work, such as profiles/gamedev/.
 sources/     Untouched upstream skills, the templates I customize from. Never edited.
 guidance/    Notes an agent can read, such as how to select a model and divide work.
-archive/     Retired skills, kept for reference.
+archive/     Retired skills (e2b-sandbox, orchestrate), kept for reference.
 SOURCES.md   Where every skill comes from: upstream link, license, pinned commit, customized versions.
 ```
 
@@ -26,7 +26,6 @@ SOURCES.md   Where every skill comes from: upstream link, license, pinned commit
 | Skill | What it does |
 |---|---|
 | [`1password-cli`](skills/1password-cli/SKILL.md) | Uses the 1Password CLI (`op`) and keeps secret values out of the agent output. |
-| [`orchestrate`](skills/orchestrate/SKILL.md) | Turns the agent into an orchestrator that plans, delegates to headless Codex, Claude Code, and Antigravity workers, verifies, retries, and reports once. Accounts and models come from a gitignored `config.local.toml`; see `config.example.toml`. |
 | [`human-voice`](skills/human-voice/SKILL.md) | Runs the full loop for prose that reads as its author, not as AI: profile, write, audit, revise, validate. Holds the suite's shared `references/` and `scripts/`. |
 | [`voice-profile`](skills/voice-profile/SKILL.md) | Builds an author's voice profile from samples of their own writing. |
 | [`voice-write`](skills/voice-write/SKILL.md) | Drafts or rewrites a piece in the author's voice from a brief and notes. |
@@ -72,8 +71,6 @@ New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills", "$HOME\.agents
 New-Item -ItemType SymbolicLink -Path "$HOME\.claude\skills\1password-cli" -Target "$PWD\skills\1password-cli"
 New-Item -ItemType SymbolicLink -Path "$HOME\.agents\skills\1password-cli" -Target "$PWD\skills\1password-cli"
 ```
-
-`orchestrate` also needs a `config.local.toml` next to its `SKILL.md`: copy `config.example.toml` and list the CLI logins on your machine. Git ignores the file.
 
 There is no install script for profiles yet.
 

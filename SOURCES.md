@@ -121,7 +121,6 @@ Skills written for this repository, not adapted from a template.
 |---|---|
 | [`skills/1password-cli`](skills/1password-cli/SKILL.md) | Original, moved from tools-and-scripts |
 | [`skills/human-voice`](skills/human-voice/SKILL.md) | Original, the human-voice suite |
-| [`skills/orchestrate`](skills/orchestrate/SKILL.md) | Original, moved from tools-and-scripts |
 | [`skills/voice-audit`](skills/voice-audit/SKILL.md) | Original, the human-voice suite |
 | [`skills/voice-profile`](skills/voice-profile/SKILL.md) | Original, the human-voice suite |
 | [`skills/voice-validate`](skills/voice-validate/SKILL.md) | Original, the human-voice suite |
