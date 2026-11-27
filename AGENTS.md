@@ -4,7 +4,7 @@ This repository holds skills for AI coding agents. There is no CLAUDE.md. This f
 
 ## The skill folders
 
-- `sources/<owner>/<skill>/` holds untouched upstream templates. **Never edit, rename, or delete anything under `sources/`.** `check.py` compares every file with the hash in `sources/sources.lock.json` and fails on any change. Only `python sources.py add` writes there.
+- `sources/<owner>/<skill>/` holds untouched upstream templates. **Never edit, rename, or delete anything inside template folders or locked files under `sources/`.** `check.py` compares every locked file with the hash in `sources/sources.lock.json` and fails on any change or stray file. Only `python sources.py add` writes templates there; `sources/<owner>/README.md` is the only local-only file allowed (trimmed upstream skill summaries).
 - `skills/<name>/` holds the owner's own skills and customized versions meant for every project.
 - `work-in-progress/<project>/` holds unfinished skills (`skills/<name>/`) with their `notes/` and `research/`. Put new skills, working notes, and research material here until the skill is finished; see `work-in-progress/README.md`.
 - `profiles/<profile>/skills/<name>/` holds versions tweaked for one kind of work. `profiles/<profile>/profile.toml` lists the skills the profile uses unchanged.

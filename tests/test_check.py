@@ -87,6 +87,14 @@ class CheckTests(unittest.TestCase):
         self.repo.write("sources/owner/tdd/notes.md", "x")
         self.assertProblem("not recorded in the lock file")
 
+    def test_owner_readme_in_sources_is_allowed(self) -> None:
+        self.repo.write("sources/owner/README.md", "# owner\n")
+        self.assertEqual(self.repo.problems(), [])
+
+    def test_skill_readme_not_in_lock_fails(self) -> None:
+        self.repo.write("sources/owner/tdd/README.md", "# tdd\n")
+        self.assertProblem("not recorded in the lock file")
+
     def test_missing_template_file_fails(self) -> None:
         (self.repo.root / "sources/owner/tdd/SKILL.md").unlink()
         self.assertProblem("recorded in the lock file but missing")

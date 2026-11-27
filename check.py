@@ -5,8 +5,9 @@
     python check.py --upstream   also confirm the lock file against GitHub
 
 Rules:
-- Every file under sources/ matches the blob hash recorded in
-  sources/sources.lock.json, and every recorded file exists.
+- Every file under sources/ (except local sources/<owner>/README.md summaries)
+  matches the blob hash recorded in sources/sources.lock.json, and every
+  recorded file exists.
 - Every skill folder in skills/, profiles/*/skills/, and
   work-in-progress/*/skills/ has a SKILL.md whose `name:` matches the folder.
 - SOURCES.md has one row per skill template, with the commit from the lock
@@ -93,8 +94,10 @@ def check_sources(root: Path, lock: dict) -> list[str]:
                     f"{shown}: differs from {entry['repo']}@{entry['commit'][:7]}; "
                     "templates must stay untouched, so copy it into skills/ or a profile instead"
                 )
+    owners = {name.split("/", 1)[0] for name in lock["entries"]}
+    allowed = expected | {base / owner / "README.md" for owner in owners}
     for path in sorted(base.rglob("*")):
-        if path.is_file() and path not in expected:
+        if path.is_file() and path not in allowed:
             problems.append(f"{path.relative_to(root).as_posix()}: not recorded in the lock file")
     for name, entry in lock["entries"].items():
         if entry["kind"] == "skill":
