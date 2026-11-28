@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="154" viewBox="0 0 640 154" font-family="sans-serif" font-size="12">
+<rect width="640" height="154" fill="white"/>
+<text x="12" y="22" font-size="14" font-weight="bold">Writer tasks that passed review in round 1, by model</text>
+<text x="162" y="54" text-anchor="end">Opus 5.5</text>
+<rect x="170" y="42" width="350.0" height="16" fill="#4C78A8"/>
+<text x="526.0" y="54" fill="#3B3B3B">67% (n=12 tasks)</text>
+<text x="162" y="80" text-anchor="end">SWE-2.1</text>
+<rect x="170" y="68" width="315.0" height="16" fill="#4C78A8"/>
+<text x="491.0" y="80" fill="#3B3B3B">60% (n=5 tasks)</text>
+<text x="162" y="106" text-anchor="end">GPT-6.2 Astra</text>
+<rect x="170" y="94" width="175.0" height="16" fill="#4C78A8"/>
+<text x="351.0" y="106" fill="#3B3B3B">33% (n=6 tasks)</text>
+<text x="162" y="132" text-anchor="end">Gemini 4 Neon</text>
+<rect x="170" y="120" width="105.0" height="16" fill="#4C78A8"/>
+<text x="281.0" y="132" fill="#3B3B3B">20% (n=10 tasks)</text>
+</svg>
