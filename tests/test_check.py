@@ -42,7 +42,7 @@ class Repo:
     def write(self, relative: str, text: str) -> None:
         path = self.root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text, encoding="utf-8")
+        path.write_text(text, encoding="utf-8", newline="\n")
 
     def save_lock(self) -> None:
         self.write("sources/sources.lock.json", json.dumps(self.lock))

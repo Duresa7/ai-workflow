@@ -12,6 +12,7 @@ work-in-progress/  Unfinished skills, with their notes and research.
 profiles/          Skill sets tweaked for one kind of work, such as profiles/gamedev/.
 sources/           Untouched upstream skills, the templates I customize from. Never edited.
 guidance/          Notes an agent can read, such as how to select a model and divide work.
+research/          Studies with their data, such as research/agent-benchmark/: which models worked for which work.
 archive/           Retired skills (e2b-sandbox, orchestrate), kept for reference.
 SOURCES.md         Where every skill comes from: upstream link, license, pinned commit, customized versions.
 ```
@@ -85,4 +86,4 @@ Python 3.11 or newer, standard library only. CI runs all three on every push and
 
 ## License
 
-MIT for my own work. See [LICENSE](LICENSE). Each template keeps its upstream license; see [SOURCES.md](SOURCES.md).
+MIT for my own work. See [LICENSE](LICENSE). The data and write-ups in [research/agent-benchmark/](research/agent-benchmark/README.md) are CC BY 4.0; its scripts are MIT. Each template keeps its upstream license; see [SOURCES.md](SOURCES.md).
